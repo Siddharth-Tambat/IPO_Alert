@@ -13,9 +13,9 @@ This Python script extracts information about ongoing IPOs from a specified webp
 
 ## Schedule
 
-To ensure timely alerts, it is recommended to schedule the script to run regularly. Here are the steps to schedule the script:
+To ensure timely alerts, it is recommended to schedule the script to run everyday. Here are the steps to schedule the script:
 
-### Cloud Hosting:
+### Cloud Hosting (Free or Paid):
 
 1. Deploy the script on a cloud platform (e.g., AWS, Google Cloud, Azure).
 2. Set up a cron job to run the script at desired intervals.
@@ -26,20 +26,46 @@ To ensure timely alerts, it is recommended to schedule the script to run regular
 2. Upload your script and required files.
 3. Use the PythonAnywhere task scheduler to run the script daily.
 
+### Scheduling on Windows or Raspberry Pi (Free):
+
+1. Ensure Python is installed on your Windows laptop or Raspberry Pi.
+2. Schedule a task using the Task Scheduler on Windows or cron jobs on Raspberry Pi to execute the script at your desired frequency.
+
+## Telegram Setup
+
+1. **Create a Telegram Bot:**
+   - Use [BotFather](https://t.me/BotFather) to create a new bot.
+   - Save the API Token.
+
+2. **Get Telegram Group/Channel ID:**
+   - Create a group/channel on Telegram.
+   - Add your bot and use [GetIDBot](https://t.me/getidsbot) to find the ID.
+
+3. **Set Up in Script:**
+   - Install required Python packages: `pip install python-telegram-bot python-dotenv`.
+   - Create a `.env` file in the script directory:
+     ```dotenv
+     API_KEY=your_bot_api_key
+     GROUP_ID=your_group_or_channel_id
+     ```
+
+4. **Modify Telebot Script:**
+   - Copy the provided `ipo_alert` function into your script.
+   - Customize it as needed.
+
+5. **Telegram Group Invitation:**
+   - If you want to join my group for early IPO alerts, [click here](https://t.me/ipoalert97).
+
 ## Usage
 
 1. **Environment Setup:**
    - Install the required Python packages using `pip install -r requirements.txt`.
    - Ensure you have a valid `.env` file with necessary environment variables (IPO_LINK, CSV, APP_LINK).
 
-2. **Telegram Setup:**
-   - Create a Telegram bot and obtain the bot token.
-   - Add the bot to your Telegram group and obtain the group chat ID.
-
-3. **Schedule Script:**
+2. **Schedule Script:**
    - Set up a scheduler to run the script at specified intervals (daily is recommended).
 
-4. **Alerts:**
+3. **Alerts:**
    - When new IPOs are detected, the script sends alerts with IPO details to the Telegram group.
 
 ## Files
