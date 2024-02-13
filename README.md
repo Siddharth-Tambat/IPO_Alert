@@ -8,7 +8,7 @@ This Python script extracts information about ongoing IPOs from a specified webp
 
 - **Web Scraping:** Utilizes BeautifulSoup for scraping IPO information from the provided webpage.
 - **Date Checking:** Verifies if an IPO is currently open based on its open and close dates.
-- **Telegram Alert:** Sends alerts to a Telegram group if new IPOs are found, using a specified Telegram bot.
+- **Telegram Alert:** Sends alerts to a Telegram channel if new IPOs are found, using a specified Telegram bot.
 - **CSV Tracking:** Maintains a CSV file to keep track of previously alerted IPOs and avoids duplicate alerts.
 
 ## Schedule
@@ -37,8 +37,8 @@ To ensure timely alerts, it is recommended to schedule the script to run everyda
    - Use [BotFather](https://t.me/BotFather) to create a new bot.
    - Save the API Token.
 
-2. **Get Telegram Group/Channel ID:**
-   - Create a group/channel on Telegram.
+2. **Get Telegram Channel ID:**
+   - Create a channel on Telegram.
    - Add your bot and use [GetIDBot](https://t.me/getidsbot) to find the ID.
 
 3. **Set Up in Script:**
@@ -46,15 +46,15 @@ To ensure timely alerts, it is recommended to schedule the script to run everyda
    - Create a `.env` file in the script directory:
      ```dotenv
      API_KEY=your_bot_api_key
-     GROUP_ID=your_group_or_channel_id
+     CHANNEL_ID=your_group_or_channel_id
      ```
 
 4. **Modify Telebot Script:**
    - Copy the provided `ipo_alert` function into your script.
    - Customize it as needed.
 
-5. **Telegram Group Invitation:**
-   - If you want to join my group for early IPO alerts, [click here](https://t.me/ipoalert97).
+5. **Telegram Channel Invitation:**
+   - If you want to join my channel for latest IPO alerts, [click here](https://t.me/ipoalert97).
 
 ## Usage
 
