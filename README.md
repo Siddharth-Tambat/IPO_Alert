@@ -17,7 +17,7 @@ To ensure timely alerts, it is recommended to schedule the script to run everyda
 
 ### Cloud Hosting (Free or Paid):
 
-1. Deploy the script on a cloud platform (e.g., AWS, Google Cloud, Azure).
+1. Deploy the script on a cloud platform (e.g., AWS - Lambda with Amazon EventBridge, GCP - Cloud Function with CLoud Scheduler, Azure - Azure Functions with Timer Trigger).
 2. Set up a cron job to run the script at desired intervals.
 
 ### Free Alternative: [PythonAnywhere](https://www.pythonanywhere.com/):
@@ -82,8 +82,9 @@ To ensure timely alerts, it is recommended to schedule the script to run everyda
 
 ## Files
 
-- `ipo_alert.py`: Contains Telegram alert function.
-- `script.py`: Main script for IPO data extraction and alerting.
+- `telegram_bot.py`: Contains Telegram alert function.
+- `main.py`: Main script for IPO data extraction and alerting.
+- `db_utils.py`: Contains database function
 - `requirements.txt`: List of required Python packages.
 - `.env.example`: Example environment variable file.
 
