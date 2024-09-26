@@ -61,11 +61,22 @@ To ensure timely alerts, it is recommended to schedule the script to run everyda
 1. **Environment Setup:**
    - Install the required Python packages using `pip install -r requirements.txt`.
    - Ensure you have a valid `.env` file with necessary environment variables (IPO_LINK, CSV, APP_LINK).
+     
+2. **Database Setup:**
+   - Ensure that the SQLite database (ipo_alert_system.db) is properly set up. The script will insert new IPOs into the database and update their status after sending alerts.
+   **Table Schema**
+   | Column Name    | Data Type | | Description |
+   | -------- | ------- |
+   | id  | INTEGER    | Primary Key, Auto-Increment |
+   | ipo_name | TEXT    | Name of the IPO (NOT NULL) |
+   | open_dt    | DATE   | IPO opening date |
+   | close_dt    | DATE   | IPO closing date |
+   | status    | Bit   | Status of IPO alert (0 = Not Sent, 1 = Sent) |
 
-2. **Schedule Script:**
+4. **Schedule Script:**
    - Set up a scheduler to run the script at specified intervals (daily is recommended).
 
-3. **Alerts:**
+5. **Alerts:**
    - When new IPOs are detected, the script sends alerts with IPO details to the Telegram group.
 
 ## Files
