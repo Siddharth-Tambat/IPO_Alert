@@ -64,8 +64,7 @@ To ensure timely alerts, it is recommended to schedule the script to run everyda
      
 2. **Database Setup:**
    - Ensure that the SQLite database (ipo_alert_system.db) is properly set up. The script will insert new IPOs into the database and update their status after sending alerts.
-## Table Schema
-
+   - Use the below table schema as a reference:
 | Column Name | Data Type | Description                         |
 |-------------|-----------|-------------------------------------|
 | id          | INTEGER   | Primary Key, Auto-Increment         |
